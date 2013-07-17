@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Advanced Custom Fields: PayPal Item Field
-Plugin URI: http://greaterthanmedia.me
+Plugin Name: Advanced Custom Fields: PayPal Field
+Plugin URI: http://mikerodriguez.me
 Description: Add PayPal Single Items to your website with the use of WordPress and ACF
-Version: 1.1.0
+Version: 2.0.0
 Author: Michael Rodriguez
 Author URI: http://www.iammikerodriguez.com
 License: GPLv2 or later
