@@ -63,4 +63,4 @@ Development of this ACF add-on will continue. In the future I'm looking to add t
 
 
 
-You can download the PayPal Item Field add-on for ACF by clicking here
+
