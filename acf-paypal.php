@@ -5,7 +5,7 @@ Plugin URI: http://mikerodriguez.me
 Description: Add PayPal Single Items to your website with the use of WordPress and ACF
 Version: 2.0.0
 Author: Michael Rodriguez
-Author URI: http://www.iammikerodriguez.com
+Author URI: http://mikerodriguez.me
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -24,11 +24,9 @@ class acf_field_paypal_item_plugin
 	function __construct()
 	{
 		// set text domain
-		/*
 		$domain = 'acf-paypal_item';
 		$mofile = trailingslashit(dirname(__File__)) . 'lang/' . $domain . '-' . get_locale() . '.mo';
 		load_textdomain( $domain, $mofile );
-		*/
 		
 		
 		// version 4+
