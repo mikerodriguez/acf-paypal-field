@@ -47,8 +47,10 @@ function my_register_fields()
 == Changelog ==
 
 
-= 2.0. =
-* Bug Fixes, ACF V4 Compatibility, Updated CSS
+= 2.0.0 =
+* Bug Fixes
+* ACF V4 Compatibility, Updated CSS
+* Updated CSS
 
 = 1.0.0 =
 * Initial Release.
