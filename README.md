@@ -16,6 +16,7 @@ The PayPal Item field currently supports 343 countries and 18 different currenci
 You can use CSS in your template stylesheet to edit each field with the classes below.
 
 `
+
 .item-field_name{} /* Targets the div containing the name of your item */
 
 .item-field_description{} /* Targets the div containing your item's description */
@@ -25,6 +26,7 @@ You can use CSS in your template stylesheet to edit each field with the classes 
 .item-field_quantity{} /* Targets the div containing your item's quantity (if enabled) */
 
 .item-field_button{} /* Targets the checkout button */
+
 `
 
 
@@ -41,8 +43,11 @@ On the edit screen (post/pages) you can add the follow classes to your admin CSS
 
 To use the PayPal Item Field in your theme just create "/fields" folder inside your theme’s folder and copy the PayPal Item Field file (paypal_item.php) into it. In your functions.php paste the following:
 
+
 `
+
 register_field('PayPalItem_field', dirname(__File__) . '/fields/paypal_item.php');
+
 
 `
 
