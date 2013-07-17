@@ -1,4 +1,4 @@
-acf-paypal-field
+ACF PayPal Field
 ================
 
 PayPal Field for the Advanced Custom Fields WordPress plugin.
@@ -11,7 +11,8 @@ The PayPal Item field currently supports 343 countries and 18 different currenci
 
 
 
-= Notes =
+Notes
+--------------
 
 You can use CSS in your template stylesheet to edit each field with the classes below.
 
@@ -38,7 +39,9 @@ On the edit screen (post/pages) you can add the follow classes to your admin CSS
 
 
 
-= Installation =
+
+Installation
+--------------
 
 
 To use the PayPal Item Field in your theme just create "/fields" folder inside your theme’s folder and copy the PayPal Item Field file (paypal_item.php) into it. In your functions.php paste the following:
@@ -50,7 +53,8 @@ register_field('PayPalItem_field', dirname(__File__) . '/fields/paypal_item.php'
 
 
 
-= Further Development =
+Further Development
+--------------
 
 Development of this ACF add-on will continue. In the future I'm looking to add the following:
 
