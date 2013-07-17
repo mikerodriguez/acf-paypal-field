@@ -32,9 +32,9 @@ You can use CSS in your template stylesheet to edit each field with the classes 
 
 On the edit screen (post/pages) you can add the follow classes to your admin CSS:
 
-`
+<pre>
 .pp-item-inputs{} /* Targets div of inputs on the edit screen*/
-`
+</pre>
 
 
 
@@ -44,12 +44,9 @@ On the edit screen (post/pages) you can add the follow classes to your admin CSS
 To use the PayPal Item Field in your theme just create "/fields" folder inside your theme’s folder and copy the PayPal Item Field file (paypal_item.php) into it. In your functions.php paste the following:
 
 
-`
-
+<pre>
 register_field('PayPalItem_field', dirname(__File__) . '/fields/paypal_item.php');
-
-
-`
+</pre>
 
 
 
