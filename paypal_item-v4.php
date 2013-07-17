@@ -62,7 +62,11 @@ class acf_field_paypal_item extends acf_field
 
 		
 		$field = array_merge($this->defaults, $field);
-		
+		$field['paypal_email'] = isset($field['paypal_email']) ? $field['paypal_email'] : '';
+        $button_label = ( isset($field['button_label']) && $field['button_label'] != "" ) ? $field['button_label'] : __("Pay Now",'acf');
+        $field['enable_quantity']   = isset($field['enable_quantity']) ? $field['enable_quantity'] : '1';
+        $field['currency']      = isset($field['currency']) ? $field['currency'] : 'USD';
+        $field['country']      = isset($field['currency']) ? $field['currency'] : 'US';
 		
 		// key is needed in the field names to correctly save the data
 		$key = $field['name'];
@@ -681,10 +685,8 @@ class acf_field_paypal_item extends acf_field
 	function format_value_for_api( $value, $post_id, $field )
 	{
 		// defaults?
-		/*
+		
 		$field = array_merge($this->defaults, $field);
-
-		*/
 		$enable_qty   = isset($field['enable_quantity']) ? $field['enable_quantity'] : '1';
 		$button_label = ( isset($field['button_label']) && $field['button_label'] != "" ) ? $field['button_label'] : __("Pay Now",'acf');
 
