@@ -67,7 +67,8 @@ class acf_field_paypal_item extends acf_field
         $field['enable_quantity']   = isset($field['enable_quantity']) ? $field['enable_quantity'] : '1';
         $field['currency']      = isset($field['currency']) ? $field['currency'] : 'USD';
         $field['country']      = isset($field['currency']) ? $field['currency'] : 'US';
-		
+		$field['button_label'] = ( isset($field['button_label']) && $field['button_label'] != "" ) ? $field['button_label'] : __("Pay Now",'acf');
+
 		// key is needed in the field names to correctly save the data
 		$key = $field['name'];
 		
