@@ -15,7 +15,7 @@ The PayPal Item field currently supports 343 countries and 18 different currenci
 
 You can use CSS in your template stylesheet to edit each field with the classes below.
 
-`
+<pre>
 
 .item-field_name{} /* Targets the div containing the name of your item */
 
@@ -27,7 +27,7 @@ You can use CSS in your template stylesheet to edit each field with the classes 
 
 .item-field_button{} /* Targets the checkout button */
 
-`
+</pre>
 
 
 On the edit screen (post/pages) you can add the follow classes to your admin CSS:
