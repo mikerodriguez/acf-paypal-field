@@ -60,9 +60,9 @@ class acf_field_paypal_item extends acf_field
 	{
 		// defaults?
 
-		/*
+		
 		$field = array_merge($this->defaults, $field);
-		*/
+		
 		
 		// key is needed in the field names to correctly save the data
 		$key = $field['name'];
@@ -81,7 +81,7 @@ class acf_field_paypal_item extends acf_field
 		do_action('acf/create_field', array(
 			'type'	=>	'text',
 			'name'	=>	'fields[' .$key.'][paypal_email]',
-			'value'	=>	$field['paypal_email'],
+			'value'	=>	 $field['paypal_email'],
 		));
 		?>
 	</td>
