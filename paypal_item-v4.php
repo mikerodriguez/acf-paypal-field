@@ -58,9 +58,7 @@ class acf_field_paypal_item extends acf_field
 	
 	function create_options( $field )
 	{
-		// defaults?
-
-		
+		// defaults?		
 		$field = array_merge($this->defaults, $field);
 		$field['paypal_email'] = isset($field['paypal_email']) ? $field['paypal_email'] : '';
         $button_label = ( isset($field['button_label']) && $field['button_label'] != "" ) ? $field['button_label'] : __("Pay Now",'acf');
