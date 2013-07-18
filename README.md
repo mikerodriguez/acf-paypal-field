@@ -30,12 +30,7 @@ This add-on can be treated as both a WP plugin and a theme include.
 2.	Edit your functions.php file and add the code below (Make sure the path is correct to include the acf-paypal.php file)
 
 ```php
-add_action('acf/register_fields', 'my_register_fields');
-
-function my_register_fields()
-{
-	include_once('acf-paypal-field/acf-paypal.php');
-}
+include_once('acf-paypal-field/acf-paypal.php');
 ```
 
 ### More Information
