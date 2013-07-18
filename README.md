@@ -36,3 +36,5 @@ include_once('acf-paypal-field/acf-paypal.php');
 ### More Information
 
 Please read the readme.txt file for more information
+
+https://github.com/mikerodriguez/acf-paypal-field/blob/master/readme.txt
