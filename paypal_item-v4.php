@@ -689,28 +689,30 @@ class acf_field_paypal_item extends acf_field
 		$enable_qty   = isset($field['enable_quantity']) ? $field['enable_quantity'] : '1';
 		$button_label = ( isset($field['button_label']) && $field['button_label'] != "" ) ? $field['button_label'] : __("Pay Now",'acf');
 
-		
-		?>
-
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					$output='<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 					    <input type="hidden" name="cmd" value="_xclick">
-					    <input type="hidden" name="business" value="<?php echo $field['paypal_email'] ?>">
-					    <div class="item-field_name"><?php echo $value['item_name'] ?></div>
-					    <input type="hidden" name="item_name" value="<?php echo $value['item_name'] ?> ">
-					    <div class="item-field_description"><?php echo $value['item_description'] ?></div>
-					    <div class="item-field_price">Price: <?php echo $value['price'] ?> <?php echo $field['currency'] ?></div>
-					    <input type="hidden" name="amount" value="<?php echo $value['price'] ?>">
+					    <input type="hidden" name="business" value="'.$field['paypal_email'].'">
+					    <div class="item-field_name">'.$value['item_name'].'</div>
+					    <input type="hidden" name="item_name" value="'.$value['item_name'].' ">
+					    <div class="item-field_description">'.nl2br($value['item_description']).'</div>
+					    <div class="item-field_price">Price: '.$value['price'].' '.$field['currency'].'</div>
+					    <input type="hidden" name="amount" value="'.$value['price'].'">
 					    <input type="hidden" name="no_shipping" value="2">
 					    <input type="hidden" name="no_note" value="0">
-					    <input type="hidden" name="currency_code" value="<?php echo $field['currency'] ?>">
-					    <input type="hidden" name="country" value="<?php echo $field['country'] ?>">
-						<?php if($enable_qty == 1): ?><div class="item-field_quantity">Qty: <input type="text" name="quantity" value=""></div><?php endif ?>
-					    <input type="hidden" name="bn" value="PP-BuyNowBF">
-					    <input type="submit" class="item-field_button" value="<?php echo $button_label ?>">  
-					</form> 
-		<?php
-		
-		
+					    <input type="hidden" name="currency_code" value="'.$field['currency'].'">
+					    <input type="hidden" name="country" value="'.$field['country'].'">';
+
+						if($enable_qty == 1){
+
+						$output.='<div class="item-field_quantity">Qty: <input type="text" name="quantity" value="1"></div>';
+						}
+
+					    $output.='<input type="hidden" name="bn" value="PP-BuyNowBF">
+					    <input type="submit" class="item-field_button" value="'.$button_label.'">
+					</form>';
+
+		return $output;
+
 		// Note: This function can be removed if not used
 		
 	}
