@@ -28,11 +28,12 @@ class acf_field_paypal_item_plugin
 		$mofile = trailingslashit(dirname(__File__)) . 'lang/' . $domain . '-' . get_locale() . '.mo';
 		load_textdomain( $domain, $mofile );
 		
-		
-		// version 4+
+		// version 5 (ACF Pro)
+		add_action('acf/include_field_types', array($this, 'include_field_types_paypal_item'));	
+
+		// version 4
 		add_action('acf/register_fields', array($this, 'register_fields'));	
 
-		
 		// version 3-
 		add_action( 'init', array( $this, 'init' ));
 	}
@@ -65,6 +66,16 @@ class acf_field_paypal_item_plugin
 	function register_fields()
 	{
 		include_once('paypal_item-v4.php');
+	}
+
+
+
+	/**
+	 *  include_field_types
+	 */
+	function include_field_types_paypal_item()
+	{
+		include_once('paypal_item-v5.php');
 	}
 	
 }
